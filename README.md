@@ -12,7 +12,7 @@ devtools::install_github("ueno-tr/flysleep")
 
 ###Analyze and output fly sleep
 ```r
-library(sinchokur)
+library(flysleep)
 x <- DAMsleep1()
 ```
 ###Sleep graph
