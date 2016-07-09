@@ -1,6 +1,6 @@
 Package: flysleep
 Type: Package
-Title: What the Package Does (Title Case)
+Title: flysleep: Sleep analysis using DAM data.
 Version: 0.1.0
 Author: Taro Ueno
 Maintainer: Taro Ueno <t-ueno@umin.ac.jp>
