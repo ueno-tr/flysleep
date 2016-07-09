@@ -1,6 +1,6 @@
 # flysleep
 
-Analyze fly sleep based on DAM (Drosophila Activito Monitor) data.
+Analyze fly sleep based on DAM (Drosophila Activity Monitor) data.
 
 ## Installation
 
