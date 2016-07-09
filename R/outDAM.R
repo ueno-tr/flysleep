@@ -1,0 +1,24 @@
+# Analyze fly sleep based on DAM data
+#
+# @param
+#
+# @return
+#
+# @export
+
+outDAM <- function(x,y) {
+  NewWb <- createWorkbook(creator = "Taro Ueno")
+
+  for(j in 1:length(x[1,1,])){
+    name  <- unlist(dimnames(x)[3])[j]
+    addWorksheet(wb = NewWb, sheetName = name, gridLines = TRUE)
+    writeData(wb = NewWb, sheet = name, x = x[,,j], startCol = 1, startRow = 1)
+  }
+
+  addWorksheet(wb = NewWb, sheetName = "stat", gridLines = TRUE)
+  writeData(wb = NewWb, sheet = "stat", x = y, rowNames=TRUE, colNames=FALSE, startCol = 1, startRow = 1)
+
+  openXL(NewWb)
+
+  saveWorkbook(wb = NewWb, "result.xlsx", overwrite = TRUE)
+}

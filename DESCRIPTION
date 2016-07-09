@@ -1,0 +1,14 @@
+Package: flysleep
+Type: Package
+Title: What the Package Does (Title Case)
+Version: 0.1.0
+Author: Taro Ueno
+Maintainer: Taro Ueno <t-ueno@umin.ac.jp>
+Description: Analyze fly sleep based on DAM data.
+License: Taro Ueno
+LazyData: TRUE
+Imports:
+ggplot2,
+RCurl,
+readxl,
+openxlsx
