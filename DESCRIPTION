@@ -7,4 +7,4 @@ Maintainer: Taro Ueno <t-ueno@umin.ac.jp>
 Description: Analyze fly sleep based on DAM data.
 License: Taro Ueno
 LazyData: TRUE
-Imports: ggplot2 RCurl readxl openxlsx
+Imports: ggplot2, RCurl, readxl, openxlsx
