@@ -18,13 +18,13 @@ meanSEM <- function(x,y){
     a <- x[,,y[i,1]]
 
     s <- as.numeric(y[i,2]):as.numeric(y[i,3])
-    t <- as.integer(unlist(strsplit(y[i,5],",")))
-    u <- s[-which(s %in% t)]
 
-    if(is.na(t)){
+    if(is.na(y[i,5])){
       b <- a[,s]
     }
     else{
+      t <- as.integer(unlist(strsplit(y[i,5],",")))
+      u <- s[-which(s %in% t)]
       b <- a[,u]
     }
 
