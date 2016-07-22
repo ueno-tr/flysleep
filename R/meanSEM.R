@@ -22,7 +22,7 @@ meanSEM <- function(x,y){
     if(is.na(y[i,5])){
       b <- a[,s]
     }
-    
+
     else{
       t <- as.integer(unlist(strsplit(y[i,5],",")))
       u <- s[-which(s %in% t)]
