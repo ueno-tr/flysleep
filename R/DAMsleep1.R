@@ -14,8 +14,11 @@ DAMsleep1 <- function() {
 
   stat <- DAMstat(Marray, sleep)
 
-  library(openxlsx)
-  outDAM(hrs, stat)
+  for(i in 1:length(hrs[1,1,])) {
+    write.table(hrs[,,i], paste(unlist(dimnames(hrs)[3])[i], "sleep"), col.names=FALSE, row.names=TRUE, sep="\t", quote=FALSE)
+  }
+
+  write.table(stat, "stat", col.names=FALSE, row.names=TRUE, sep="\t", quote=FALSE)
 
   return(hrs)
 }
