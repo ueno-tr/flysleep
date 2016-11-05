@@ -18,7 +18,7 @@ DAMsleep1 <- function() {
     write.table(hrs[,,i], paste("sleep", unlist(dimnames(hrs)[3])[i]), col.names=TRUE, row.names=FALSE, sep="\t", quote=FALSE)
   }
 
-  write.table(stat, "stat", col.names=FALSE, row.names=TRUE, sep="\t", quote=FALSE)
+  write.table(stat, "stat.txt", col.names=FALSE, row.names=TRUE, sep="\t", quote=FALSE)
 
   return(hrs)
 }
