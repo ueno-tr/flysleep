@@ -6,11 +6,12 @@
 #
 # @export
 
-meanSEM <- function(x,y){
-  out <- data.frame(matrix(NA, ncol=4, nrow=72*length(y[,1])))
+meanSEM <- function(x,z){
+  out <- data.frame(matrix(NA, ncol=4, nrow=72*length(z[,1])))
   part <- data.frame(matrix(0, ncol=4, nrow=72))
   part[,1] <- c(1:72)
 
+  y <- as.matrix(z)
 
   for(i in 1:length(y[,1])){
     part[,2] <- y[i,4]
