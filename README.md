@@ -7,7 +7,7 @@ Analyze fly sleep based on DAM (Drosophila Activity Monitor) data using R.
 ```r
 install.packages("devtools")
 library("devtools")
-devtools::install_github("ueno-tr/flysleep")
+devtools::install_github("ueno-tr/flysleep", force=TRUE)
 ```
 
 ## Sample Data
