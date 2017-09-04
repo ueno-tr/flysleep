@@ -11,7 +11,7 @@ devtools::install_github("ueno-tr/flysleep", force=TRUE)
 ```
 
 ## Sample Data
-https://dl.dropboxusercontent.com/u/14848009/testDAM.zip
+https://drive.google.com/open?id=0B95gzTDviXuGZGtzRUJVTTV2ZjQ
 
 ## Usage
 
