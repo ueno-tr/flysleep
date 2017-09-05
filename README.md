@@ -2,7 +2,7 @@
 
 Analyze fly sleep based on DAM (Drosophila Activity Monitor) data using R.
 
-## Installation
+## Installation (Run as an Admin)
 
 ```r
 install.packages("devtools")
