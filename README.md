@@ -11,7 +11,7 @@ devtools::install_github("ueno-tr/flysleep", force=TRUE)
 ```
 
 ## Sample Data
-https://drive.google.com/open?id=0B95gzTDviXuGZGtzRUJVTTV2ZjQ
+https://drive.google.com/open?id=0B5fskUMfMyPJdlhvTXZCWDlxSWc
 
 ## Usage
 
