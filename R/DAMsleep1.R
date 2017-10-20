@@ -14,11 +14,15 @@ DAMsleep1 <- function() {
 
   stat <- DAMstat(Marray, sleep)
 
+  stat123 <- DAMstat123(Marray, sleep)
+
   for(i in 1:length(hrs[1,1,])) {
     write.table(hrs[,,i], paste("sleep", unlist(dimnames(hrs)[3])[i]), col.names=TRUE, row.names=FALSE, sep="\t", quote=FALSE)
   }
 
   write.table(stat, "stat.txt", col.names=FALSE, row.names=TRUE, sep="\t", quote=FALSE)
+
+  write.table(stat123, "stat123.txt", col.names=FALSE, row.names=TRUE, sep="\t", quote=FALSE)
 
   return(hrs)
 }
