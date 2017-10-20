@@ -19,7 +19,7 @@ DAMstat123 <- function(x,y) {
 
     out[4,,j] <- apply(x[1441:2880,,j], 2, sum)
     sleep2 <- apply(y[1441:2880,,j], 2, sum)
-    out[5,,j] <- sleep5/60
+    out[5,,j] <- sleep2/60
     out[6,,j] <- out[4,,j]/(1440-sleep2)
 
     out[7,,j] <- apply(x[2881:4320,,j], 2, sum)
