@@ -20,7 +20,12 @@ https://drive.google.com/open?id=0B5fskUMfMyPJTGZLb2s0YjV5Z28
 library(flysleep)
 x <- DAMsleep1()
 ```
-###Sleep graph
+###Sleep graph 3 days
 ```r
 DAMsleep2(x)
+```
+
+###Sleep graph 1 day each (exclude 1 of 3 days) to compare LD, LL, DD conditions etc.
+```r
+DAMsleep3(x, 1-3)
 ```
