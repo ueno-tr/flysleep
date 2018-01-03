@@ -7,11 +7,12 @@
 # @export
 
 act2sleep <- function(x) {
-  sleep <- array(0, dim=c(1440*3, 32, length(x[1,1,])))
+	n <- length(x[,1,1])
+  sleep <- array(0, dim=c(n, 32, length(x[1,1,])))
 
   for(j in 1:length(x[1,1,])){
 
-    for(i in 1:(1440*3-4)){
+    for(i in 1:(n-4)){
       a <- x[i:(i+4),,j]
       b <- apply(a,2,sum)
 
@@ -20,7 +21,7 @@ act2sleep <- function(x) {
       }
     }
 
-    sleep[4317:4320,,j] <- sleep[4316,,j]
+    sleep[(n-3):n,,j] <- sleep[n-4,,j]
   }
   dimnames(sleep) <- dimnames(x)
   return(sleep)

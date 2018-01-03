@@ -7,11 +7,12 @@
 # @export
 
 hrsleep <- function(x){
-  hr <- array(0, dim=c(72, 32, length(x[1,1,])))
+	n <- length(x[,1,1])/60
+  hr <- array(0, dim=c(n, 32, length(x[1,1,])))
 
   for(j in 1:length(x[1,1,])){
 
-    for(i in 1:72) {
+    for(i in 1:n) {
       a <- x[(i*60-59):(i*60),,j]
       hr[i,,j] <- apply(a,2,sum)
     }
