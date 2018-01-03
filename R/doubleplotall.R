@@ -8,7 +8,7 @@ doubleplotall <- function(x) {
     pdf(paste(file.name, ".pdf", sep=""), width=11, height=8)
 
     par(oma = c(0, 0, 2, 0))
- 	par(mfcol = c(20,16)) #8行1列の形でプロット出力
+ 	par(mfcol = c(20,8)) #10行8列の形でプロット出力 2ページで32匹
  	par(mai = c(0, 0.05, 0.1, 0)) #余白設定
 
  	for (i in 1:length(x[1,,j])) {
