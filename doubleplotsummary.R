@@ -2,12 +2,14 @@
 ## importMarray2の後に使用
 ## summary.xlsを使用
 ## barplotallの結果をみてsummary.xlsにいれておく
+## 引数xにimportMarray2の結果
+## 引数expに実験名を""を付けて入れる（例："171226-180106_25LDDD"）
 
-doubleplotsummary <- function(x) {
+doubleplotsummary <- function(x,exp) {
   library(readxl)
   summary <- as.matrix(read_excel("summary.xls"))
 
-  mean <- matrix(NA, ncol=length(summary[,1]), nrow=length(x[,1]))
+  mean <- matrix(NA, ncol=length(summary[,1]), nrow=length(x[,1,1]))
 
   for(i in 1:length(summary[,1])){
     a <- x[,,summary[i,1]]
@@ -35,15 +37,15 @@ doubleplotsummary <- function(x) {
   par(mfcol = c(20,6)) #10行6列の形でプロット出力 1ページで12ライン
   par(mai = c(0, 0.05, 0.1, 0)) #余白設定
 
-  for (i in 1:length(x[1,])) {
+  for (i in 1:length(mean[1,])) {
     title <- colnames(mean)[i]
-    a <- x[1:2880,i]
+    a <- mean[1:2880,i]
     barplot(a, main = title, axes=FALSE, xlab = NA, ylab = NA) #x軸に時間軸 y軸にx座標の値
     for (k in 2:10) {
-      b <- x[((k-1)*1440 + 1):((k+1)*1440), i]
+      b <- mean[((k-1)*1440 + 1):((k+1)*1440), i]
       barplot(b, axes=FALSE, xlab = NA, ylab = NA)
     }
-    mtext(side = 3, line=0, outer=T, text ="doubleplot_summary", cex=1.5)
+    mtext(side = 3, line=0, outer=T, text =exp, cex=1.5)
     }
     dev.off()
 
