@@ -5,8 +5,6 @@
 
 SDmeanSEM <- function(x,z){
   out <- data.frame(matrix(NA, ncol=4, nrow=48*length(z[,1])))
-
-  ##hrsのデータ用にpartを作成
   part <- data.frame(matrix(0, ncol=4, nrow=72))
   part[,1] <- c(1:72)
 
@@ -28,14 +26,12 @@ SDmeanSEM <- function(x,z){
       u <- s[-which(s %in% t)]
       b <- a[,u]
     }
-    ##ここまででエクセルデータを元にしたhrsを格納
 
-    ##baselineとの差分を作成
     c <- rbind((b[1:24,] - b[1:24,]), (b[25:48,] - b[1:24,]), (b[49:72,] - b[1:24,]))
 
     d <- c
-    for(i in 1:length(c[1,])){
-      d[,i] <- cumsum(c[,i])
+    for(j in 1:length(c[1,])){
+      d[,j] <- cumsum(c[,j])
     }
 
     part[,3] <- apply(d,1,mean)
