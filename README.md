@@ -29,3 +29,7 @@ DAMsleep2(x)
 ```r
 DAMsleep3(x, 1-3)
 ```
+###Delta sleep graph for sleep deprivation
+```r
+SDgraph(x)
+```
