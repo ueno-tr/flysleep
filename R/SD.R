@@ -2,7 +2,7 @@
 ##3 day data (1:baseline, 2:SD, 3:rebound)
 ##DAMsleep1で出力されるhrsを入力にする
 
-SD <- function(hrs) {
+SDgraph <- function(hrs) {
   library(readxl)
   summary <- read_excel("summary.xls")
 
