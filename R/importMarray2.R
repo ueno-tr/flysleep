@@ -8,8 +8,7 @@
 
 importMarray2 <- function() {
 
-  files <- list.files() #ディレクトリ内のファイル名をfilesに代入
-  files <- files[1:(length(files)-1)] #summary.csvが最後に来るはずなので、これを除く
+  files <- list.files(pattern = "CtM....txt$") #ディレクトリ内のDAMファイル名（"CtM....txt$"で絞り込み）をfilesに代入
 
   s <- data.matrix(read.table(files[1], sep="\t")) #文字などが入っているためscanが使えない　44列データになる
   t <- array(0, dim=c(length(s[,1]), 32, length(files))) #行数に合わせて設定
