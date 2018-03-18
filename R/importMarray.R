@@ -8,9 +8,7 @@
 
 importMarray <- function() {
 
-  files <- list.files() #ディレクトリ内のファイル名をfilesに代入
-  files <- files[1:(length(files)-1)] #summary.csvが最後に来るはずなので、これを除く
-
+  files <- list.files(pattern = "CtM....txt$") #ディレクトリ内のDAMファイル名（"CtM....txt$"で絞り込み）をfilesに代入
 
   t <- array(0, dim=c(1440*3, 32, length(files)))
 
