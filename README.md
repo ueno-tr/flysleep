@@ -33,3 +33,7 @@ DAMsleep3(x, 1-3)
 ```r
 SDgraph(x)
 ```
+###Analyze arousal threshold (stim: at 00min 1hr each, data: from XX:56 to XX:55)
+```r
+responder()
+```
