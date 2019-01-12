@@ -32,7 +32,7 @@ period <- function() {
   oscillation.df <- data.frame(dateTime = 1:length(oscillation), value = oscillation)
   chiSqPeriodogramPlot(chiSqPeriodogram(oscillation.df, res=0.1))
 
-  ggsave(file=paste("period_",genotype, ".pdf", sep=""))
+  ggsave(file=paste("period_", genotype, ".pdf", sep=""))
 
   }
 
