@@ -16,7 +16,7 @@ period <- function() {
   for(i in 1:length(summary.m[,1])) {
     genotype <- summary.m[i,4]
     a <- Marray[,,summary.m[i,1]]
-    s <- as.numeric(y[i,2]):as.numeric(y[i,3])
+    s <- as.numeric(summary.m[i,2]):as.numeric(summary.m[i,3])
 
     if(is.na(summary.m[i,5])){
       b <- a[,s]
