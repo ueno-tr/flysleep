@@ -37,3 +37,8 @@ SDgraph(x)
 ```r
 responder()
 ```
+
+###Analyze rhythm of the activity
+```r
+period()
+```
