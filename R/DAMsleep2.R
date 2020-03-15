@@ -19,7 +19,8 @@ DAMsleep2 <- function(hrs) {
   errors <- aes(ymax = mean + SEM, ymin = mean - SEM)
   p <- p + geom_errorbar(errors, width = 0.2) + geom_point(size = 2)
   p
-  
+
   ##pngファイルに出力
   ggsave(file = "sleep2graph.png", dpi = 100, width =12.336 , height =10 )
+  dev.off()
 }
