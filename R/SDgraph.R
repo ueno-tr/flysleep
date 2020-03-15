@@ -17,5 +17,5 @@ SDgraph <- function(hrs) {
   p
 
   ##pngファイルに出力
-  ggsave(file = "SDgraph.png", dpi = 100, width =12.336 , height =10 )
+  ggsave(file = "sleepSDgraph.png", dpi = 100, width =12.336 , height =10 )
 }
