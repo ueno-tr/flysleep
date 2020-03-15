@@ -18,6 +18,4 @@ SDgraph <- function(hrs) {
 
   ##pngファイルに出力
   ggsave(file = "SDgraph.png", dpi = 100, width =12.336 , height =10 )
-dev.off()
-
 }

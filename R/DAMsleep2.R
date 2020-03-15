@@ -22,5 +22,4 @@ DAMsleep2 <- function(hrs) {
 
   ##pngファイルに出力
   ggsave(file = "sleep2graph.png", dpi = 100, width =12.336 , height =10 )
-  dev.off()
 }
