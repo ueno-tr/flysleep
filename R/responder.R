@@ -52,5 +52,4 @@ responder <- function(){
   }
 
   write.table(stat, "responder.txt", col.names=FALSE, row.names=TRUE, sep="\t", quote=FALSE)
-
 }
