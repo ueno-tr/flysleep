@@ -26,7 +26,8 @@ pptx <- function(file) {
   add_slide(layout = "Title Only", master = "Office Theme")%>%
   ph_with_text(type = "title", str = "sleep2graph",index = 1)%>%
   ph_with_img_at(src = file.name, left = 0, top = 1.5, width = 10, height = 6)%>%
-  
+}
+
   #ファイル出力(保存する)
   print(target = pptx_file_path) %>%
   invisible()
