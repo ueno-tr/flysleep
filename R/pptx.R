@@ -16,8 +16,8 @@ pptx <- function() {
   my_pres <- read_pptx() %>%
   #タイトルページ
   add_slide(layout = "Title Slide", master = "Office Theme") %>%
-  ph_with_text(type = "ctrTitle", str = "タイトル") %>%
-  ph_with_text(type = "subTitle", str = "file/name") %>%
+  ph_with(value = "タイトル", location = ph_location_type(type = "ctrTitle")) %>%
+  ph_with(value = "file/name", location = ph_location_type(type = "subTitle")) %>%
 
   #ファイルを出力
   print(target = pptx_file_path) %>%
@@ -27,13 +27,12 @@ pptx <- function() {
   file.name <- files[i]
 
   read_pptx("sleep_result.pptx") %>%
-  add_slide(layout = "Title Only", master = "Office Theme") %>%
-  ph_with_text(type = "title", str = file.name, index = 1) %>%
-  ph_with_img_at(src = file.name, left = 0, top = 1.5, width = 10, height = 6) %>%
+  add_slide(layout = "Title and Content", master = "Office Theme") %>%
+  ph_with(value = file.name, location = ph_location_type(type = "title")) %>%
+  ph_with(external_img(file.name),
+   location = ph_location_type(type = "body")) %>%
 
   print(target = pptx_file_path) %>%
   invisible()
 }
-
-
 }
