@@ -36,6 +36,6 @@ meanSEM <- function(x,z){
     out[(i*72-71):(i*72),] <- part
   }
 
-  colnames(out) <- c("time", "genotype", "mean", "SEM")
+  colnames(out) <- c("time", names(z)[4], "mean", "SEM")
   return(out)
 }
