@@ -15,12 +15,12 @@ DAMsleep2 <- function(hrs) {
 
   ##グラフに出力
   library(ggplot2)
-  p <- ggplot(out, aes(x = time, y = mean,group=exp, colour=exp) ) + geom_line() + ylab("sleep (min/hr)")
+  p <- ggplot(out, aes(x = time, y = mean, group=exp, colour=exp) ) + geom_line() + ylab("sleep (min/hr)")
 
   errors <- aes(ymax = mean + SEM, ymin = mean - SEM)
   p <- p + geom_errorbar(errors, width = 0.2) + geom_point(size = 2)
   p
 
   ##pngファイルに出力
-  ggsave(file = "sleep2graph.png", dpi = 1000, width =15 , height =10 )
+  ggsave(file = "sleep2graph.png", dpi = 200, width =15 , height =10)
 }
