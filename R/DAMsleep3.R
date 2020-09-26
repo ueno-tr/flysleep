@@ -18,5 +18,5 @@ DAMsleep3 <- function(hrs,n) { #1-3日のうち、除外する日をnとして�
   p
 
   ##pngファイルに出力
-  ggsave(file = "sleep3graph.png", dpi = 100, width =12.336 , height =10 )
+  ggsave(file = "sleep3graph.png", dpi = 100, width =15 , height =10 )
 }
