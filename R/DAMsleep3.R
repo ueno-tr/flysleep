@@ -11,12 +11,12 @@ DAMsleep3 <- function(hrs,n) { #1-3日のうち、除外する日をnとして�
 
   ##グラフに出力
   library(ggplot2)
-  p <- ggplot(out3, aes(x = hr, y = mean, group=interaction(genotype, day), colour=genotype, linetype=day) ) + geom_line() + ylab("sleep (min/hr)")
+  p <- ggplot(out3, aes_string(x = "hr", y = "mean", "group=interaction(names(out3)[2], day)", colour=names(out3)[2], linetype="day") ) + geom_line() + ylab("sleep (min/hr)")
 
   errors <- aes(ymax = mean + SEM, ymin = mean - SEM)
   p <- p + geom_errorbar(errors, width = 0.2) + geom_point(size = 2)
   p
 
   ##pngファイルに出力
-  ggsave(file = "sleep3graph.png", dpi = 100, width =15 , height =10 )
+  ggsave(file = "sleep3graph.png", dpi = 200, width =15 , height =10 )
 }
