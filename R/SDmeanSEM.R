@@ -40,6 +40,6 @@ SDmeanSEM <- function(x,z){
     out[(i*48-47):(i*48),] <- part[25:72,]
   }
 
-  colnames(out) <- c("time", "genotype", "mean", "SEM")
+  colnames(out) <- c("time", names(z)[4], "mean", "SEM")
   return(out)
 }
